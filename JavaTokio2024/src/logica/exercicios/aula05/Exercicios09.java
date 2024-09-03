@@ -9,15 +9,21 @@ public class Exercicios09 {
 		Scanner SC = new Scanner(System.in);
 		
 		System.out.println("Digite o numero escolhido por voce:");
-		int valor = Integer.parseInt(SC.nextLine());
+		String valor = SC.nextLine();
+		int numeroInt = Integer.parseInt(valor);
 		
-		int centena = valor / 100;
-		int centena1 = centena * 100;
-		int dezena = valor % centena;
-		int dezena1 = dezena / 100;
-		int dezena10 = dezena1 / dezena;
 		
-
+		int centena = (int) (numeroInt / 100f);
+		int centena1 = (int) (centena * 100f);
+		int dezena = (int) (numeroInt % centena1);
+		int dezena1 = (int) (dezena / 10f);
+		int dezena10 = (int) (dezena1 / 10f);
+		int unidade = (int) (dezena % dezena10);
+		
+		System.out.println("Centena: " + centena1
+										+ "\nDezena: " + dezena10
+										+ "\nUnidade: " + unidade);
+		
 	}
 
 }
