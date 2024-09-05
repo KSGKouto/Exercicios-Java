@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Exercicios05 {
 
 	public static void main(String[] args) {
-		
 		Scanner SC = new Scanner(System.in);
 		System.out.println("Digite um numero:");
 		int num1 = Integer.parseInt(SC.nextLine());
@@ -14,11 +13,21 @@ public class Exercicios05 {
 		System.out.println("Escolha o operador da conta \n+" + "\n-" + "\n*" + "\n/");
 		char operador = SC.nextLine().charAt(0);
 		
-		
-		
-		
-		SC.close();
-		
+		switch (operador) {
+		case '+':
+			System.out.println(num1 + num2);
+			break;
+		case '-':
+			System.out.println(num1 - num2);
+			break;
+		case '*':
+			System.out.println(num1 * num2);
+			break;
+		case '/':
+			System.out.println(num1 / num2);
+			break;
+		}
+
 	}
 
 }
